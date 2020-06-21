@@ -4,6 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean name="screen" class="com.aelmehdi.xml.Screen" p:brand="Samsoul"/>
+    <bean name="hardDrive" class="com.aelmehdi.xml.HardDrive">
+        <property name="size" value="55000"/>
+    </bean>
 
     <bean name="computer" class="com.aelmehdi.xml.Computer" autowire="byName">
         <property name="screen" ref="screen"/>
