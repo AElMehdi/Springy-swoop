@@ -9,5 +9,6 @@ public class DemoXml {
 
         Computer computer = context.getBean("computer", Computer.class);
         computer.gotScreen();
+        computer.hardDriveSize();
     }
 }

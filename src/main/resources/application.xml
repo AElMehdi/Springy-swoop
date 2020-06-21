@@ -3,10 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="screen" class="com.aelmehdi.xml.Screen" p:brand="Samsoul"></bean>
+    <bean name="screen" class="com.aelmehdi.xml.Screen" p:brand="Samsoul"/>
 
-    <bean class="com.aelmehdi.xml.Computer" name="computer">
-        <property name="screen" ref="screen"></property>
+    <bean name="computer" class="com.aelmehdi.xml.Computer" autowire="byName">
+        <property name="screen" ref="screen"/>
     </bean>
 
 </beans>
