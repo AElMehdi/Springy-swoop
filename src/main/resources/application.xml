@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean name="screen" class="com.aelmehdi.xml.Screen" p:brand="Samsoul"/>
-    <bean name="hardDrive" class="com.aelmehdi.xml.HardDrive">
+    <bean name="hardDrive" class="com.aelmehdi.xml.HardDrive" scope="prototype">
         <property name="size" value="55000"/>
     </bean>
 
