@@ -20,4 +20,8 @@ public class Computer {
     public void setHardDrive(HardDrive hardDrive) {
         this.hardDrive = hardDrive;
     }
+
+    public HardDrive getHardDrive() {
+        return this.hardDrive;
+    }
 }

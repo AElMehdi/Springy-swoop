@@ -12,16 +12,19 @@ public class XmlConfigurationDemo {
         Computer computer = context.getBean("computer", Computer.class);
         Computer computer2 = context.getBean("computer", Computer.class);
 
+        HardDrive hardDrive2 = context.getBean("hardDrive", HardDrive.class);
+
         out.println("There" + howManyBeans(computer, computer2) + "computer(s)");
+        out.println("There" + howManyBeans(computer.getHardDrive(), hardDrive2) + "hard drive(s)");
 
         computer.gotScreen();
         computer.hardDriveSize();
     }
 
-    private static String howManyBeans(Computer computer, Computer computer2) {
-        if (computer == computer2) {
+    private static String howManyBeans(Object bean, Object bean2) {
+        if (bean == bean2) {
             return " is one ";
         }
-        return "are multiple";
+        return " are multiple ";
     }
 }
