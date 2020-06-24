@@ -19,6 +19,8 @@ public class XmlConfigurationDemo {
 
         computer.gotScreen();
         computer.hardDriveSize();
+
+        context.registerShutdownHook();
     }
 
     private static String howManyBeans(Object bean, Object bean2) {

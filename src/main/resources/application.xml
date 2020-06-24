@@ -8,7 +8,8 @@
         <property name="size" value="55000"/>
     </bean>
 
-    <bean name="computer" class="com.aelmehdi.xml.Computer" autowire="byName">
+    <bean name="computer" class="com.aelmehdi.xml.Computer" autowire="byName"
+          init-method="init" destroy-method="destroy">
         <property name="screen" ref="screen"/>
     </bean>
 

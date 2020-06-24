@@ -24,4 +24,12 @@ public class Computer {
     public HardDrive getHardDrive() {
         return this.hardDrive;
     }
+
+    public void init() {
+        System.out.println("Computer init method");
+    }
+
+    public void destroy() {
+        System.out.println("Computer destroy method");
+    }
 }
