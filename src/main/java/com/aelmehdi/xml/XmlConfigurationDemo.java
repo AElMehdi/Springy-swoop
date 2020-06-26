@@ -20,6 +20,8 @@ public class XmlConfigurationDemo {
         computer.gotScreen();
         computer.hardDriveSize();
 
+        HelloWorld helloWorld = context.getBean("helloWorld", HelloWorld.class);
+
         context.registerShutdownHook();
     }
 
