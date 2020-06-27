@@ -13,11 +13,6 @@
         <property name="screen" ref="screen"/>
     </bean>
 
-    <bean id = "helloWorld" class = "com.aelmehdi.xml.HelloWorld"
-          init-method = "init" destroy-method = "destroy">
-        <property name = "message" value = "Hello World!"/>
-    </bean>
-
-    <bean class = "com.aelmehdi.xml.InitHelloWorld" />
+    <bean class = "com.aelmehdi.xml.BeansPostProcessor" />
 
 </beans>

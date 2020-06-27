@@ -20,9 +20,7 @@ public class XmlConfigurationDemo {
         computer.gotScreen();
         computer.hardDriveSize();
 
-        HelloWorld helloWorld = context.getBean("helloWorld", HelloWorld.class);
-
-        context.registerShutdownHook();
+        context.registerShutdownHook(); // Ensures a graceful shutdown
     }
 
     private static String howManyBeans(Object bean, Object bean2) {
