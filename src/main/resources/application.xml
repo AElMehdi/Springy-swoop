@@ -4,13 +4,23 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean name="screen" class="com.aelmehdi.xml.Screen" p:brand="Samsoul"/>
+
     <bean name="hardDrive" class="com.aelmehdi.xml.HardDrive" scope="prototype">
         <property name="size" value="55000"/>
     </bean>
 
-    <bean name="computer" class="com.aelmehdi.xml.Computer" autowire="byName"
+    <bean name="biggerHardDrive" class="com.aelmehdi.xml.HardDrive" scope="prototype" parent="hardDrive">
+        <property name="size" value="99000"/>
+    </bean>
+
+    <bean name="laptop" class="com.aelmehdi.xml.Computer" autowire="byName"
           init-method="init" destroy-method="destroy">
         <property name="screen" ref="screen"/>
+    </bean>
+
+    <bean name="pc" class="com.aelmehdi.xml.Computer" init-method="init" destroy-method="destroy">
+        <property name="screen" ref="screen"/>
+        <property name="hardDrive" ref="biggerHardDrive"/>
     </bean>
 
     <bean class = "com.aelmehdi.xml.BeansPostProcessor" />
