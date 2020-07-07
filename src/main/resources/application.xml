@@ -5,10 +5,16 @@
 
     <bean name="screen" class="com.aelmehdi.xml.Screen" p:brand="Samsoul"/>
 
+    <!-- Hard drive bean template -->
+    <bean name="hardDriveTemplate" abstract="true">
+        <property name="size" value="20000"/>
+    </bean>
+
     <bean name="hardDrive" class="com.aelmehdi.xml.HardDrive" scope="prototype">
         <property name="size" value="55000"/>
     </bean>
 
+    <!-- Bean inheritance example -->
     <bean name="biggerHardDrive" class="com.aelmehdi.xml.HardDrive" scope="prototype" parent="hardDrive">
         <property name="size" value="99000"/>
     </bean>
@@ -23,6 +29,6 @@
         <property name="hardDrive" ref="biggerHardDrive"/>
     </bean>
 
-    <bean class = "com.aelmehdi.xml.BeansPostProcessor" />
+    <bean class="com.aelmehdi.xml.BeansPostProcessor"/>
 
 </beans>
